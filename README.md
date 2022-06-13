@@ -1,2 +1,2 @@
-# KonusarakOgrenTestApp
+# KonusarakOgrenTestApp (RICK AND MORTY API)
 
