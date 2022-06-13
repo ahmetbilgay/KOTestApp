@@ -67,7 +67,7 @@ const EpisodeInfoScreen = ({navigation, route}) => {
             <View style={styles.item}>
               <Text>{e.id}</Text>
               <Text>{e.name}</Text>
-              <Image style={styles.png} source={{uri: e.image}} />
+              <Image resizeMode='contain' style={styles.images} source={{uri: e.image}} />
               <Text>{e.url}</Text>
             </View>
           </TouchableOpacity>
@@ -95,8 +95,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  png: {
+  images: {
     width: 200,
     height: 200,
+  },
+  text: {
+    color: '#222',
   },
 });

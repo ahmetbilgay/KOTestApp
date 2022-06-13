@@ -9,7 +9,6 @@ import {
 import {api} from '../../api';
 
 const HomepageScreen = ({navigation}) => {
-
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -38,9 +37,9 @@ const HomepageScreen = ({navigation}) => {
               onPress={() => navigationFunction(e.url)}
               key={e.name}>
               <View style={styles.item}>
-                <Text>Bölüm Adı: {e.name}</Text>
-                <Text>Tarih: {e.air_date}</Text>
-                <Text>Bölüm: {e.episode}</Text>
+                <Text style={styles.text}>Bölüm Adı: {e.name}</Text>
+                <Text style={styles.text}>Tarih: {e.air_date}</Text>
+                <Text style={styles.text}>Bölüm: {e.episode}</Text>
               </View>
             </TouchableOpacity>
           ))
@@ -58,5 +57,9 @@ const styles = StyleSheet.create({
   item: {
     padding: 10,
     borderBottomWidth: 0.3,
+    borderBottomColor: '#222',
+  },
+  text: {
+    color: '#222',
   },
 });

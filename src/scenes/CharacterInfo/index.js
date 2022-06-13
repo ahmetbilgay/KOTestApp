@@ -23,11 +23,11 @@ const ThreeScreen = ({route}) => {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         {data !== null && !isLoading ? (
           <View style={styles.item}>
-            <Text>Id: {data.id}</Text>
-            <Text>İsim: {data.name}</Text>
-            <Text>Tür: {data.species}</Text>
-            <Text>Cinsiyet: {data.gender}</Text>
-            <Text>{url ? url : null}</Text>
+            <Text style={styles.text}>Id: {data.id}</Text>
+            <Text style={styles.text}>İsim: {data.name}</Text>
+            <Text style={styles.text}>Tür: {data.species}</Text>
+            <Text style={styles.text}>Cinsiyet: {data.gender}</Text>
+            <Text style={styles.text}>{url ? url : null}</Text>
             <Image
               resizeMode="contain"
               style={styles.image}
@@ -36,7 +36,7 @@ const ThreeScreen = ({route}) => {
           </View>
         ) : (
           <>
-            <Text>Yükleniyor ...</Text>
+            <Text style={styles.text}>Yükleniyor ...</Text>
           </>
         )}
       </ScrollView>
@@ -65,5 +65,8 @@ const styles = StyleSheet.create({
   image: {
     width: width * 0.6,
     height: width * 0.6,
+  },
+  text: {
+    color: '#222',
   },
 });
