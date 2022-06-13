@@ -54,27 +54,27 @@ const EpisodeInfoScreen = ({navigation, route}) => {
     <ScrollView style={styles.container}>
       {data ? (
         <View key={data.name} style={styles.item}>
-          <Text>Id: {data.id}</Text>
-          <Text>Bölüm Adı: {data.name}</Text>
-          <Text>Tarih: {data.air_date}</Text>
-          <Text>Bölüm: {data.episode}</Text>
-          <Text>{url ? url : null}</Text>
+          <Text style={styles.text}>Id: {data.id}</Text>
+          <Text style={styles.text}>Bölüm Adı: {data.name}</Text>
+          <Text style={styles.text}>Tarih: {data.air_date}</Text>
+          <Text style={styles.text}>Bölüm: {data.episode}</Text>
+          <Text style={styles.text}>{url ? url : null}</Text>
         </View>
       ) : null}
       {arr.length > 0 && !isLoading ? (
         arr.map((e, key) => (
           <TouchableOpacity key={key} onPress={() => navigationFunction(e.url)}>
             <View style={styles.item}>
-              <Text>{e.id}</Text>
-              <Text>{e.name}</Text>
+              <Text style={styles.text}>{e.id}</Text>
+              <Text style={styles.text}>{e.name}</Text>
               <Image resizeMode='contain' style={styles.images} source={{uri: e.image}} />
-              <Text>{e.url}</Text>
+              <Text style={styles.text}>{e.url}</Text>
             </View>
           </TouchableOpacity>
         ))
       ) : (
         <View>
-          <Text>Yükleniyor ...</Text>
+          <Text style={styles.text}>Yükleniyor ...</Text>
         </View>
       )}
     </ScrollView>
