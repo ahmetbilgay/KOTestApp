@@ -1,2 +1,2 @@
-# KonusarakOgrenTestApp (RICK AND MORTY API)
+# Rick And Morty Test Api (RICK AND MORTY API)
 
